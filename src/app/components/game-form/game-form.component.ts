@@ -3,6 +3,7 @@ import { Game, GameFormData } from '../../models/game.model';
 
 @Component({
   selector: 'app-game-form',
+  standalone: false,
   templateUrl: './game-form.component.html',
   styleUrls: ['./game-form.component.css']
 })

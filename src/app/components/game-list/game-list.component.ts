@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-game-list',
+  standalone: false,
   templateUrl: './game-list.component.html',
   styleUrls: ['./game-list.component.css']
 })
