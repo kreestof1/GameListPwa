@@ -1,6 +1,6 @@
 # Game List PWA
 
-A modern Progressive Web Application for managing your video game collection. Built with Angular 18, this app allows you to track games across different platforms (PC, PS5, Xbox).
+A modern Progressive Web Application for managing your video game collection. Built with Angular 19, this app allows you to track games across different platforms (PC, PS5, Xbox).
 
 ## Features
 
@@ -24,7 +24,7 @@ A modern Progressive Web Application for managing your video game collection. Bu
 1. Clone the repository
 2. Install dependencies:
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
 ## Development server
@@ -55,30 +55,41 @@ src/app/
 
 ## Technologies Used
 
-- **Angular 18**: Latest Angular framework with modern features
-- **TypeScript 5.4**: Modern TypeScript with advanced type system
+- **Angular 19.2**: Latest stable Angular framework with security patches
+- **TypeScript 5.6**: Modern TypeScript with advanced type system
 - **RxJS 7.8**: Reactive programming library
 - **esbuild**: Ultra-fast JavaScript bundler
+- **Angular CLI 21.1**: Latest CLI tools
 - **CSS Grid**: Responsive layout
 - **localStorage API**: Client-side data persistence
 
-## What's New in Angular 18
+## What's New in Angular 19
 
-This project has been upgraded to Angular 18, bringing numerous improvements:
+This project has been upgraded to Angular 19.2.16, bringing numerous improvements:
 
 - ⚡ **Faster Builds**: Using esbuild for significantly faster compilation
-- 🔒 **Strict Type Checking**: Enhanced type safety with strict mode
+- 🔒 **Enhanced Security**: Latest security patches for XSS and XSRF vulnerabilities
 - 📦 **Smaller Bundles**: Optimized bundle sizes for better performance
-- 🛠️ **Modern Tooling**: Latest Angular CLI with improved developer experience
+- 🛠️ **Modern Tooling**: Angular CLI 21 with improved developer experience
 - 🚀 **Better Performance**: Framework optimizations and improved change detection
 - ✅ **Native Node.js Support**: Works seamlessly with Node.js v20+ without legacy flags
+- 🔥 **Hot Module Replacement (HMR)**: Enabled by default for faster development
+
+## Security
+
+This project uses Angular 19.2.16 which includes important security fixes:
+- Fixed XSS vulnerabilities in SVG script attributes
+- Fixed XSRF token leakage in HTTP client
+- Patched SVG animation and MathML attribute vulnerabilities
+- Remaining vulnerabilities are limited to development dependencies only
 
 ## Development Notes
 
 - Uses the new `@angular-devkit/build-angular:application` builder
 - Polyfills are now configured in `angular.json` instead of separate file
 - TypeScript strict mode enabled for better code quality
-- No need for `--openssl-legacy-provider` flag with Angular 18
+- Components use `standalone: false` for NgModule compatibility
+- HMR (Hot Module Replacement) is enabled for faster development
 
 ## Running unit tests
 
