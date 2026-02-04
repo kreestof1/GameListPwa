@@ -1,6 +1,6 @@
 # Game List PWA
 
-A Progressive Web Application for managing your video game collection. Built with Angular 6, this app allows you to track games across different platforms (PC, PS5, Xbox).
+A modern Progressive Web Application for managing your video game collection. Built with Angular 18, this app allows you to track games across different platforms (PC, PS5, Xbox).
 
 ## Features
 
@@ -24,18 +24,21 @@ A Progressive Web Application for managing your video game collection. Built wit
 1. Clone the repository
 2. Install dependencies:
 ```bash
-npm install --legacy-peer-deps
+npm install
 ```
 
 ## Development server
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-**Note**: The project uses `--openssl-legacy-provider` flag to ensure compatibility with Node.js v20+.
-
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/games-list-pwa/` directory.
+
+For production build:
+```bash
+ng build
+```
 
 ## Project Structure
 
@@ -52,27 +55,35 @@ src/app/
 
 ## Technologies Used
 
-- **Angular 6.1**: Frontend framework
-- **TypeScript 2.7**: Programming language
-- **RxJS 6.2**: Reactive programming library
+- **Angular 18**: Latest Angular framework with modern features
+- **TypeScript 5.4**: Modern TypeScript with advanced type system
+- **RxJS 7.8**: Reactive programming library
+- **esbuild**: Ultra-fast JavaScript bundler
 - **CSS Grid**: Responsive layout
 - **localStorage API**: Client-side data persistence
 
-## Known Compatibility Notes
+## What's New in Angular 18
 
-This project was built with Angular 6 and has been configured to work with modern Node.js versions (v20+):
-- Uses `sass` instead of deprecated `node-sass`
-- Configured with `--openssl-legacy-provider` for webpack compatibility
-- RxJS locked to version 6.2.2 for TypeScript 2.7 compatibility
+This project has been upgraded to Angular 18, bringing numerous improvements:
+
+- ⚡ **Faster Builds**: Using esbuild for significantly faster compilation
+- 🔒 **Strict Type Checking**: Enhanced type safety with strict mode
+- 📦 **Smaller Bundles**: Optimized bundle sizes for better performance
+- 🛠️ **Modern Tooling**: Latest Angular CLI with improved developer experience
+- 🚀 **Better Performance**: Framework optimizations and improved change detection
+- ✅ **Native Node.js Support**: Works seamlessly with Node.js v20+ without legacy flags
+
+## Development Notes
+
+- Uses the new `@angular-devkit/build-angular:application` builder
+- Polyfills are now configured in `angular.json` instead of separate file
+- TypeScript strict mode enabled for better code quality
+- No need for `--openssl-legacy-provider` flag with Angular 18
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To get more help on the Angular CLI use `ng help` or visit the [Angular CLI Documentation](https://angular.dev/tools/cli).

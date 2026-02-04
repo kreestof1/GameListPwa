@@ -12,7 +12,7 @@ export class GameListComponent implements OnInit, OnDestroy {
   games: Game[] = [];
   editingGame: Game | null = null;
   showForm = false;
-  private subscription: Subscription;
+  private subscription!: Subscription;
 
   constructor(private gameService: GameService) { }
 
