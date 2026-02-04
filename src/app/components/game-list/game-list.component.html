@@ -1,0 +1,33 @@
+<div class="game-list-container">
+  <h1>Game List</h1>
+
+  <button class="btn btn-primary" (click)="onAddNew()" *ngIf="!showForm">
+    Add New Game
+  </button>
+
+  <app-game-form
+    *ngIf="showForm"
+    [game]="editingGame"
+    (formSubmit)="onFormSubmit($event)"
+    (formCancel)="onFormCancel()">
+  </app-game-form>
+
+  <div class="games-grid" *ngIf="games.length > 0 && !showForm">
+    <div class="game-card" *ngFor="let game of games">
+      <div class="game-header">
+        <h3>{{ game.name }}</h3>
+        <span class="platform-badge" [ngClass]="'platform-' + game.platform.toLowerCase()">
+          {{ game.platform }}
+        </span>
+      </div>
+      <div class="game-actions">
+        <button class="btn btn-edit" (click)="onEdit(game)">Edit</button>
+        <button class="btn btn-delete" (click)="onDelete(game.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-games" *ngIf="games.length === 0 && !showForm">
+    <p>No games yet. Add your first game!</p>
+  </div>
+</div>
