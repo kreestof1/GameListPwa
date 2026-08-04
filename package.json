@@ -13,11 +13,11 @@
   "dependencies": {
     "@angular/animations": "^19.2.16",
     "@angular/common": "^22.0.2",
-    "@angular/compiler": "^20.3.25",
+    "@angular/compiler": "^22.1.0",
     "@angular/core": "^19.2.20",
     "@angular/forms": "^19.2.16",
     "@angular/platform-browser": "^19.2.16",
-    "@angular/platform-browser-dynamic": "^19.2.16",
+    "@angular/platform-browser-dynamic": "^22.1.0",
     "@angular/router": "^19.2.16",
     "rxjs": "^7.8.0",
     "tslib": "^2.6.0",
@@ -26,7 +26,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^22.1.2",
     "@angular/cli": "^21.1.2",
-    "@angular/compiler-cli": "^19.2.16",
+    "@angular/compiler-cli": "^22.1.0",
     "@angular/language-service": "^19.2.16",
     "@modelcontextprotocol/sdk": "^1.26.0",
     "@types/jasmine": "~5.1.0",
